@@ -8,38 +8,20 @@ const gallery = document.querySelector('.gallery')
 const elements = []
 
 galleryItems.forEach(item => {
-	const galleryLink = document.createElement('a')
-	galleryLink.className = 'gallery__link'
-	galleryLink.href = item.original
-	const galleryImage = document.createElement('img')
-    galleryImage.className = 'gallery__image'
+	const galleryLink = document.createElement('a');
+	galleryLink.className = 'gallery__link';
+	galleryLink.href = item.original;
+	const galleryImage = document.createElement('img');
+    galleryImage.className = 'gallery__image';
     galleryImage.src = item.preview;
-    galleryImage.setAttribute('title', item.description)
+    galleryImage.setAttribute('title', item.description);
     galleryImage.alt = item.description;
 
-	galleryLink.append(galleryImage)
-	elements.push(galleryLink)
+	galleryLink.append(galleryImage);
+	elements.push(galleryLink);	
 })
 
-
-// const gallery = document.querySelector('.gallery')
-// const items = []
-
-// galleryItems.forEach(element => {
-// 	const galleryLink = document.createElement('a')
-// 	galleryLink.className = 'gallery__link'
-// 	galleryLink.href = element.original
-// 	const galleryImage = document.createElement('img')
-// 	galleryImage.className = 'gallery__image'
-// 	galleryImage.src = element.preview
-// 	galleryImage.setAttribute('title', element.description)
-// 	galleryImage.alt = element.description
-
-// 	galleryLink.append(galleryImage)
-// 	items.push(galleryLink)
-// })
-
-gallery.append(...elements)
+gallery.append(...elements);
 
 
 
@@ -50,5 +32,5 @@ gallery.append(...elements)
 //   });
 
 new SimpleLightbox('.gallery a', {
-	captionDelay: 250
+	captionDelay: 250;
 })
