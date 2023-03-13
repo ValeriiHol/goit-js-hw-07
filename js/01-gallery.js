@@ -29,11 +29,9 @@ gallery.addEventListener('click', event => {
     <img src="${event.target.dataset.source}" width="800" height="600">`,
     {
     onShow: () => {
-        console.log('addEventListener');
         window.addEventListener('keydown', onPressEsc);
     },
-    onClose: () => {
-        console.log('removeEventListener');
+    onClose: () => {        
         window.removeEventListener('keydown', onPressEsc);
     }
     });

@@ -1,36 +1,21 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-console.log(galleryItems);
-
-
 const gallery = document.querySelector('.gallery')
 const elements = []
 
 galleryItems.forEach(item => {
-	const galleryLink = document.createElement('a');
-	galleryLink.className = 'gallery__link';
-	galleryLink.href = item.original;
-	const galleryImage = document.createElement('img');
-    galleryImage.className = 'gallery__image';
-    galleryImage.src = item.preview;
-    galleryImage.setAttribute('title', item.description);
-    galleryImage.alt = item.description;
+	const galleryItem = `
+    <a class="gallery__link" href="${item.original}">
+    <img class="gallery__image" src="${item.preview}"
+    alt="${item.description}"/>
+    </a>`;
 
-	galleryLink.append(galleryImage);
-	elements.push(galleryLink);	
+	elements.push(galleryItem);	
 })
 
-gallery.append(...elements);
-
-
-
-// const lightbox = new SimpleLightbox('.gallery a', {
-//     caption: true,
-//     captionsData: 'alt',
-//     captionDelay: 250,
-//   });
+gallery.insertAdjacentHTML('beforeend', elements);
 
 new SimpleLightbox('.gallery a', {
-	captionDelay: 250;
+	captionDelay: 250,
 })
