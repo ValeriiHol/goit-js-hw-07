@@ -13,7 +13,9 @@ galleryItems.forEach(item => {
 
 	elements.push(galleryItem);	
 })
+// console.log(elements);
 // console.log(elements.join(''));
+// gallery.insertAdjacentHTML('beforeend', elements);
 gallery.insertAdjacentHTML('beforeend', elements.join(''));
 
 new SimpleLightbox('.gallery a', {
