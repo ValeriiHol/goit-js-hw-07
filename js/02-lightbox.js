@@ -13,8 +13,8 @@ galleryItems.forEach(item => {
 
 	elements.push(galleryItem);	
 })
-
-gallery.insertAdjacentHTML('beforeend', elements);
+// console.log(elements.join(''));
+gallery.insertAdjacentHTML('beforeend', elements.join(''));
 
 new SimpleLightbox('.gallery a', {
 	captionDelay: 250,

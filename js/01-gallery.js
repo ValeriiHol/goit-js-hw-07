@@ -16,7 +16,7 @@ galleryItems.forEach(item => {
 	elements.push(galleryItem);
 })
 
-gallery.insertAdjacentHTML('beforeend', elements);
+gallery.insertAdjacentHTML('beforeend', elements.join(''));
 
 gallery.addEventListener('click', event => {
     event.preventDefault();
