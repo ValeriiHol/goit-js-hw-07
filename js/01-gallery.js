@@ -38,8 +38,7 @@ gallery.addEventListener('click', event => {
 
     const onPressEsc = event => {
         console.log(event.code);
-        if (event.code === 'Escape') {
-            console.log('Escape');
+        if (event.code === 'Escape') {            
             instance.close();
         }
       };
